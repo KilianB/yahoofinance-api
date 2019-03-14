@@ -64,6 +64,12 @@ public class YahooFinance {
     public static final String QUOTES_CSV_DELIMITER = ",";
     public static final String TIMEZONE = "America/New_York";
     
+    //Can be used to extract volume.
+    //https://query1.finance.yahoo.com/v8/finance/chart/AAPL?symbol=AAPL&period1=1531605600&period2=1552520325&interval=1d&includePrePost=true&events=div%7Csplit%7Cearn&lang=en-US&region=US&crumb=AeezNfH7f4p&corsDomain=finance.yahoo.com
+    //Same here usedful for many additional information
+    //https://query2.finance.yahoo.com/v10/finance/quoteSummary/GOOG?formatted=true&crumb=AeezNfH7f4p&lang=en-US&region=US&modules=price%2CsummaryDetail%2CpageViews&corsDomain=finance.yahoo.com
+    //https://query2.finance.yahoo.com/v10/finance/quoteSummary/GOOG?formatted=true&crumb=AeezNfH7f4p&lang=en-US&region=US&modules=defaultKeyStatistics%2CfinancialData%2CcalendarEvents&corsDomain=finance.yahoo.com
+    
     public static final int CONNECTION_TIMEOUT = 
             Integer.parseInt(System.getProperty("yahoofinance.connection.timeout", "10000"));
     
@@ -412,5 +418,4 @@ public class YahooFinance {
         }
         return stocks;
     }
-    
 }
